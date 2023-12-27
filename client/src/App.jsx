@@ -1,15 +1,16 @@
-import { useState } from 'react'
 
-import Button from '@mui/material/Button';
+
+import Board from './pages/Boards/_id.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-         <Button variant="contained">Hello world</Button>
-    </>
-  )
+
+	return (
+		<>
+			<Board/>
+	
+		</>
+	);
 }
 
-export default App
+export default App;
