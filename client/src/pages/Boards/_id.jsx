@@ -1,16 +1,8 @@
-// import {
-// 	useColorScheme,
-// } from '@mui/material/styles';
-
-// import InputLabel from '@mui/material/InputLabel';
-// import MenuItem from '@mui/material/MenuItem';
-// import FormControl from '@mui/material/FormControl';
-// import Select from '@mui/material/Select';
 
 import Container from '@mui/material/Container';
-import AppBar from '~/components/AppBar'
-import BoardBar from '../Boards/BoardBar';
-import BoardContent from '../Boards/BoardContent';
+import AppBar from '~/components/AppBar/AppBar'
+import BoardBar from './BoardBar/BoardBar';
+import BoardContent from './BoardContent/BoardContent';
 function Board() {
 	return (
 		<>
