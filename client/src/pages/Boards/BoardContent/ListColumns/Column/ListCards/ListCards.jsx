@@ -1,12 +1,12 @@
 import React from 'react';
 
-
 import Box from '@mui/material/Box';
 import Card from './Card/Card';
 // import Button from '@mui/material/Button';
 // import Typography from '@mui/material/Typography';
 
-function ListCards() {
+function ListCards({ cards }) {
+	
 	return (
 		<Box
 			sx={{
@@ -30,23 +30,10 @@ function ListCards() {
 				},
 			}}
 		>
-			<Card />
-			<Card temporaryHideMedia />
-{/* 		
+			{cards?.map((card) => {
+				return <Card key={card._id} card={card} />;
+			})}
 
-		
-
-			<Card
-				sx={{
-					cursor: 'pointer',
-					boxShadow: '0 1px 1px rgba(0,0,0,0.2)',
-					overflow: 'unset',
-				}}
-			>
-				<CardContent sx={{ p: 1.5, '&:last-child': { p: 1.5 } }}>
-					<Typography>Card 1</Typography>
-				</CardContent>
-			</Card> */}
 		</Box>
 	);
 }

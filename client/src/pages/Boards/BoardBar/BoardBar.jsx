@@ -9,11 +9,13 @@ import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
+import { capitalizeFirstLetter } from '~/utils/formatter';
 const MENU_STYLES = {
 	color: (theme) => theme.palette.primary.main,
 	borderRadius: '4px',
 };
-function BoardBar() {
+function BoardBar({board}) {
+
 	return (
 		<Box
 			px={2}
@@ -36,14 +38,14 @@ function BoardBar() {
 				<Chip
 					sx={MENU_STYLES}
 					icon={<DashboardIcon />}
-					label="app English"
+					label={capitalizeFirstLetter(board?.title)}
 					onClick={() => {}}
 				/>
 
 				<Chip
 					sx={MENU_STYLES}
 					icon={<LockIcon />}
-					label="Public/private workspaces"
+					label={capitalizeFirstLetter(board?.type)}
 					onClick={() => {}}
 				/>
 				<Chip
